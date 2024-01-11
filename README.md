@@ -1,5 +1,9 @@
 # daigo
 
+[![npm version](https://img.shields.io/npm/v/daigo.svg?style=flat-square)](https://www.npmjs.com/package/daigo)
+[![npm downloads](https://img.shields.io/npm/dm/daigo.svg?style=flat-square)](http://npm-stat.com/charts.html?package=daigo)
+[![npm license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
+
 一个微信小程序请求库。
 
 ## 安装
