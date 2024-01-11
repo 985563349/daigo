@@ -1,6 +1,6 @@
 {
   "name": "daigo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A WeChat Mini Program Request Library",
   "main": "dist/daigo.js",
   "files": [
