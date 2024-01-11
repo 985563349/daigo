@@ -2,7 +2,7 @@
   "name": "daigo",
   "version": "1.0.0",
   "description": "A WeChat Mini Program Request Library",
-  "main": "dist/diago.js",
+  "main": "dist/daigo.js",
   "files": [
     "dist"
   ],
@@ -19,7 +19,7 @@
   ],
   "author": "Jee",
   "license": "MIT",
-  "homepage": "https://github.com/985563349/diago#readme",
+  "homepage": "https://github.com/985563349/daigo#readme",
   "devDependencies": {
     "release-it": "^17.0.1",
     "webpack": "^5.89.0",
