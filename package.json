@@ -2,14 +2,21 @@
   "name": "daigo",
   "version": "1.0.0",
   "description": "A WeChat Mini Program Request Library",
-  "private": true,
+  "main": "dist/diago.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/985563349/daigo.git"
+  },
+  "keywords": ["daigo"],
+  "author": "Jee",
+  "license": "MIT",
+  "homepage": "https://github.com/985563349/diago#readme",
   "devDependencies": {
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
