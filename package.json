@@ -7,17 +7,21 @@
     "dist"
   ],
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "release": "release-it"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/985563349/daigo.git"
   },
-  "keywords": ["daigo"],
+  "keywords": [
+    "daigo"
+  ],
   "author": "Jee",
   "license": "MIT",
   "homepage": "https://github.com/985563349/diago#readme",
   "devDependencies": {
+    "release-it": "^17.0.1",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
   }
