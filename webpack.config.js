@@ -5,8 +5,11 @@ module.exports = {
   devtool: 'source-map',
   entry: './src/index.js',
   output: {
-    filename: 'daigo.js',
     path: path.resolve(__dirname, 'dist'),
+    filename: 'daigo.js',
+    library: {
+      type: 'commonjs2'
+    },
     clean: true,
   },
 };
