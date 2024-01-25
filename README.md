@@ -190,7 +190,7 @@ instance.get('/query', {
 
 ```javascript
 // 添加请求拦截器
-daigo.interceptors.request(
+daigo.interceptors.request.use(
   (config) => {
     // 在发送请求之前做些什么
     return config;
@@ -202,7 +202,7 @@ daigo.interceptors.request(
 );
 
 // 添加响应拦截器
-daigo.interceptors.response(
+daigo.interceptors.response.use(
   (response) => {
     // 在响应数据做些什么
     return response;
