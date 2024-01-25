@@ -2,19 +2,27 @@ const utils = require('../utils');
 
 class InterceptorManager {
   constructor() {
-    this.handles = [];
+    this.handlers = [];
   }
 
   use(fulfilled, rejected) {
-    this.handles.push({
+    this.handlers.push({
       fulfilled,
       rejected,
     });
-    return this.handles.length - 1;
+    return this.handlers.length - 1;
+  }
+
+  eject(id) {
+    this.handlers.splice(id, 1);
+  }
+
+  clear() {
+    this.handlers = [];
   }
 
   forEach(callback) {
-    utils.forEach(this.handles, callback);
+    utils.forEach(this.handlers, callback);
   }
 }
 
