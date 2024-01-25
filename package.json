@@ -21,6 +21,7 @@
   "license": "MIT",
   "homepage": "https://github.com/985563349/daigo#readme",
   "devDependencies": {
+    "@release-it/conventional-changelog": "^8.0.1",
     "release-it": "^17.0.1",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
