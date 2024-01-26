@@ -4,7 +4,7 @@
 [![npm downloads](https://img.shields.io/npm/dm/daigo.svg?style=flat-square)](http://npm-stat.com/charts.html?package=daigo)
 [![npm license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
 
-一个微信小程序请求库。
+一个轻量级微信小程序请求库。
 
 ## 安装
 
@@ -212,6 +212,14 @@ daigo.interceptors.response.use(
     return Promise.reject(error);
   }
 );
+```
+
+如果你稍后需要移除拦截器，可以这样：
+
+```javascript
+const interceptor = daigo.interceptors.request.use(function () {/*...*/});
+
+daigo.interceptors.request.eject(interceptor);
 ```
 
 ### 取消请求
