@@ -1,4 +1,5 @@
 const utils = require('../utils');
+const settle = require('./settle');
 
 function dispatchRequest(config) {
   const url = /https?:/.test(config.url) ? config.url : config.baseURL + config.url;
@@ -9,7 +10,9 @@ function dispatchRequest(config) {
     const requestTask = wx.request(
       utils.merge(config, {
         url,
-        success: resolve,
+        success: (response) => {
+          settle(resolve, reject, { ...response, config });
+        },
         fail: reject,
       })
     );
