@@ -1,5 +1,7 @@
 const utils = require('../utils');
+const defaults = require('../defaults');
 const settle = require('./settle');
+const adapters = require('../adapters');
 
 function dispatchRequest(config) {
   const url = /https?:/.test(config.url) ? config.url : config.baseURL + config.url;
@@ -7,7 +9,9 @@ function dispatchRequest(config) {
   return new Promise((resolve, reject) => {
     const { cancelToken } = config;
 
-    const requestTask = wx.request(
+    const adapter = adapters.getAdapter(config.adapter || defaults.adapter);
+
+    const task = adapter(
       utils.merge(config, {
         url,
         success: (response) => {
@@ -20,7 +24,7 @@ function dispatchRequest(config) {
     if (cancelToken) {
       cancelToken.subscribe((reason) => {
         reject(reason);
-        requestTask.abort();
+        task.abort();
       });
     }
   });
