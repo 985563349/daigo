@@ -22,7 +22,8 @@ npm install daigo
 const daigo = require('daigo');
 
 // 向给定 id 的用户发起请求
-daigo.get('/user?id=12345')
+daigo
+  .get('/user?id=12345')
   .then(function (response) {
     // 处理成功情况
     console.log(response);
@@ -36,7 +37,8 @@ daigo.get('/user?id=12345')
   });
 
 // 上述请求也可以按以下方式完成（可选）
-daigo.get('/user', {
+daigo
+  .get('/user', {
     data: {
       id: 12345,
     },
@@ -65,7 +67,8 @@ async function getUser() {
 发起一个 POST 请求：
 
 ```javascript
-daigo.post('/user', {
+daigo
+  .post('/user', {
     data: {
       firstName: 'Fred',
       lastName: 'Flintstone',
@@ -84,7 +87,6 @@ daigo.post('/user', {
 可以向 daigo 传递相关配置来创建请求：
 
 ```javascript
-// 发起一个 POST 请求
 daigo({
   method: 'POST',
   url: '/user',
@@ -217,7 +219,9 @@ daigo.interceptors.response.use(
 如果你稍后需要移除拦截器，可以这样：
 
 ```javascript
-const interceptor = daigo.interceptors.request.use(function () {/*...*/});
+const interceptor = daigo.interceptors.request.use(function () {
+  /*...*/
+});
 
 daigo.interceptors.request.eject(interceptor);
 ```
@@ -236,4 +240,35 @@ daigo.get('/query', {
 
 // 取消请求 (message 参数是可选的)
 source.cancel('Operation canceled by the user.');
+```
+
+### 上传文件
+
+您可以通过将 uploadFile 属性设置为 true 来上传一个文件。
+
+```javascript
+daigo({
+  uploadFile: true,
+  url: 'https://example.weixin.qq.com/upload', // 仅为示例，非真实的接口地址
+  filePath: file.url,
+  name: 'file',
+  formData: { user: 'test' },
+  onProgressUpdate: (progress) => {
+    console.log(progress);
+  },
+});
+```
+
+### 下载文件
+
+您可以通过将 downloadFile 属性设置为 true 来下载一个文件。
+
+```javascript
+daigo({
+  downloadFile: true,
+  url: 'https://example.com/audio/123', // 仅为示例，非真实的接口地址
+  onProgressUpdate: (progress) => {
+    console.log(progress);
+  },
+});
 ```
