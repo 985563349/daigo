@@ -1,0 +1,17 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  daigo:
+    specifier: file:..
+    version: file:..
+
+packages:
+
+  file:..:
+    resolution: {directory: .., type: directory}
+    name: daigo
+    dev: false

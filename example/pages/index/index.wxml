@@ -1,0 +1,6 @@
+<navigation-bar title="WeChat" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+
+<view class="container">
+  <button bind:tap="start">start</button>
+  <button bind:tap="cancel">cancel</button>
+</view>
