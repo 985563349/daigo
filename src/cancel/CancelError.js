@@ -1,6 +1,6 @@
 class CancelError {
   constructor(message) {
-    this.message = message || 'request abort.';
+    this.errMsg = message || 'request:fail abort';
   }
 }
 
