@@ -8,4 +8,4 @@ function settle(resolve, reject, response) {
   }
 }
 
-module.exports = settle;
+export default settle;

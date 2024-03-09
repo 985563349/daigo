@@ -18,6 +18,7 @@ function forEach(collection, iteratee) {
 
     for (let i = 0; i < keys.length; i++) {
       const key = keys[i];
+
       if (iteratee(collection[key], key, collection) === false) {
         return;
       }
@@ -51,8 +52,8 @@ function merge() {
   return result;
 }
 
-module.exports = {
+export default {
+  forEach,
   extend,
   merge,
-  forEach,
 };

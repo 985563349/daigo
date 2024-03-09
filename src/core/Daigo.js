@@ -1,6 +1,6 @@
-const dispatchRequest = require('./dispatchRequest');
-const InterceptorManager = require('./InterceptorManager');
-const utils = require('../utils');
+import dispatchRequest from './dispatchRequest';
+import InterceptorManager from './InterceptorManager';
+import utils from '../utils';
 
 class Daigo {
   constructor(defaults) {
@@ -46,4 +46,4 @@ utils.forEach(['delete', 'get', 'head', 'options', 'post', 'put', 'patch'], (met
   };
 });
 
-module.exports = Daigo;
+export default Daigo;

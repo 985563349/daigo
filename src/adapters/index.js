@@ -1,4 +1,4 @@
-const wxAdapter = require('./wx');
+import wxAdapter from './wx';
 
 const adapters = {
   wx: wxAdapter,
@@ -22,6 +22,6 @@ function getAdapter(nameOrAdapter) {
   return nameOrAdapter;
 }
 
-module.exports = {
+export default {
   getAdapter,
 };

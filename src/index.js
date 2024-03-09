@@ -1,7 +1,7 @@
-const Daigo = require('./core/Daigo');
-const CancelToken = require('./cancel/CancelToken');
-const utils = require('./utils');
-const defaults = require('./defaults');
+import Daigo from './core/Daigo';
+import CancelToken from './cancel/CancelToken';
+import utils from './utils';
+import defaults from './defaults';
 
 function createInstance(config) {
   const context = new Daigo(config);
@@ -20,4 +20,4 @@ function createInstance(config) {
 const daigo = createInstance(defaults);
 daigo.CancelToken = CancelToken;
 
-module.exports = daigo;
+export default daigo;

@@ -1,4 +1,4 @@
-const adapters = require('./adapters');
+import adapters from './adapters';
 
 function getDefaultAdapter() {
   let adapter;
@@ -23,4 +23,4 @@ const defaults = {
   },
 };
 
-module.exports = defaults;
+export default defaults;

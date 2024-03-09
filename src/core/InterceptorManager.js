@@ -1,4 +1,4 @@
-const utils = require('../utils');
+import utils from '../utils';
 
 class InterceptorManager {
   constructor() {
@@ -26,4 +26,4 @@ class InterceptorManager {
   }
 }
 
-module.exports = InterceptorManager;
+export default InterceptorManager;

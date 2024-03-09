@@ -16,4 +16,4 @@ function wxAdapter(config) {
   return wx.request({ method, ...rest });
 }
 
-module.exports = wxAdapter;
+export default wxAdapter;

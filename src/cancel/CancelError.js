@@ -4,4 +4,4 @@ class CancelError {
   }
 }
 
-module.exports = CancelError;
+export default CancelError;

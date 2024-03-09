@@ -1,7 +1,7 @@
-const utils = require('../utils');
-const defaults = require('../defaults');
-const settle = require('./settle');
-const adapters = require('../adapters');
+import utils from '../utils';
+import defaults from '../defaults';
+import settle from './settle';
+import adapters from '../adapters';
 
 function dispatchRequest(config) {
   const url = /https?:/.test(config.url) ? config.url : config.baseURL + config.url;
@@ -30,4 +30,4 @@ function dispatchRequest(config) {
   });
 }
 
-module.exports = dispatchRequest;
+export default dispatchRequest;

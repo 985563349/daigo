@@ -1,4 +1,4 @@
-const CancelError = require('./CancelError');
+import CancelError from './CancelError';
 
 class CancelToken {
   constructor(executor) {
@@ -43,4 +43,4 @@ class CancelToken {
   }
 }
 
-module.exports = CancelToken;
+export default CancelToken;
